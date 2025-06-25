@@ -16,7 +16,7 @@ public class JobRandomizer {
 	public String chooseJob() {
 		Random r = new Random();
 		
-		int randomJob = r.nextInt(jobs.length) + 1;
+		int randomJob = r.nextInt(jobs.length);
 		
 		String chosenJob = jobsToString(jobs[randomJob]);
 		

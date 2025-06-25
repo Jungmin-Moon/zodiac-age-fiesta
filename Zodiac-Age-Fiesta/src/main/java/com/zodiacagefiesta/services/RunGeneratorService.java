@@ -27,11 +27,13 @@ public class RunGeneratorService {
 			
 			while(sixUniqueJobs.contains(newJob)) {
 				newJob = jobRandomizer.chooseJob();
-			}
+			} 
 			
 			sixUniqueJobs.add(newJob);
 		}
 		
 		return sixUniqueJobs;
 	}
+	
+	
 }

@@ -5,9 +5,9 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import com.zodiacagefiesta.services.RunGeneratorService;
-
+@SpringBootTest
 public class RunGeneratorServiceTests {
 
 	
@@ -24,5 +24,7 @@ public class RunGeneratorServiceTests {
 		for(String i: testJobs) {
 			System.out.println(i);
 		}
+		System.out.println();
 	}
+	
 }
