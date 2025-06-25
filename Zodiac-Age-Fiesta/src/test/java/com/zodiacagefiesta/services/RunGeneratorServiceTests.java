@@ -27,4 +27,33 @@ public class RunGeneratorServiceTests {
 		System.out.println();
 	}
 	
+	@Test
+	void testSixJobs() {
+		List<String> testJobs = new ArrayList<>();
+		
+		testJobs = runGeneratorService.generateSixJobs();
+		
+		for(String i: testJobs) {
+			System.out.println(i);
+		}
+		System.out.println();
+	}
+	
+	@Test
+	void testSingleJob() {
+		System.out.println(runGeneratorService.generateOneJobForAll() + "\n");
+	}
+	
+	@Test
+	void testTwelveUniqueJobs() {
+		List<String> testJobs = new ArrayList<>();
+		
+		testJobs = runGeneratorService.generateTwelveUniqueJobs();
+		
+		for(String i: testJobs) {
+			System.out.println(i);
+		}
+		
+		System.out.println();
+	}
 }
