@@ -61,10 +61,22 @@ public class RunGeneratorService {
 			while(twelveUniqueJobs.contains(newJob)) {
 				newJob = jobRandomizer.chooseJob();
 			}
+			
+			twelveUniqueJobs.add(newJob);
 		}
 		
 		return twelveUniqueJobs;
 	}
 	
-	
+	//Generates a list of the 12 jobs in random order to assign two to each character; these can be dupes
+	public List<String> generateTwelveJobs() {
+		List<String> twelveJobs = new ArrayList<>();
+		
+		for (int i = 0; i < 12; i++) {
+			String newJob = jobRandomizer.chooseJob();
+			twelveJobs.add(newJob);
+		}
+		
+		return twelveJobs;
+	}
 }
