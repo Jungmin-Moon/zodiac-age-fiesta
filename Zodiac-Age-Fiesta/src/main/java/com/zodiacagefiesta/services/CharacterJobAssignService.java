@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.zodiacagefiesta.entities.Runs;
-import com.zodiacagefiesta.jobs.Jobs;
 
 @Service
 public class CharacterJobAssignService {

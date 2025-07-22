@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th = "http://www.thymeleaf.org"
+                  xmlns = "http://www.w3.org/1999/xhtml"
+				  xmlns:sec = "https://ww.thymeleaf.org/thymeleaf-extras-sprintsecurity6">
+
+
+	<head>
+		<meta charset = "UTF-8">
+		<title>Profile</title>
+		<link rel = "stylesheet" type = "text/css" th:href = "@{/css/profile.css}" />
+	</head>
+	
+	<body>
+		<h1>Welcome, <span th:remove = "tag" sec:authentication = "name">thymeleaf</span></h1>
+		
+		<br />
+		<br />
+		<br />
+		
+		<div id = "currentRun">
+			
+		</div>
+		
+		<br />
+		<br />
+		<br />
+		<div id = "oldRuns">
+		</div>
+		
+		<br />
+		<br />
+		<br />
+		<div id = "createNewRun">
+		</div>
+	</body>
+</html>
