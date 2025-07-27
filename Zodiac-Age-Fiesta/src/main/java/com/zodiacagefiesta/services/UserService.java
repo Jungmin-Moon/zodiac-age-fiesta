@@ -15,7 +15,7 @@ public class UserService implements UserDetailsService{
 	
 	private UserRepository userRepo;
 	
-	UserService(UserRepository userRepo) {
+	public UserService(UserRepository userRepo) {
 		this.userRepo = userRepo;
 	}
 	
