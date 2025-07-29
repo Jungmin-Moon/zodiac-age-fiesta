@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th = "http://www.thymeleaf.org">
+	
+
+	<head>
+		<meta charset = "UTF-8">
+		<title>Login</title>
+		<link rel = "stylesheet" type = "text/css" th:href = "@{/css/login.css}" />
+	</head>
+	
+	
+	<body>
+		<div>
+			<form th:action = "@{/login}" method = "POST">
+				Username: <input type = "text" name = "username" /><br />
+				Password: <input type = "password" name = "password" /><br />
+				<input type = "hidden" th:name = "${_csrf.parameterName}" th:value = "${_csrf.token}" />
+				<button type = "submit">Log in</button>
+			</form>
+		</div>
+		
+		<br />
+		<br />
+		<div th:if = "${param.error}">
+			Invalid username or password. Please make sure to check your entered the correct values for your username and/or password.
+		</div>
+	</body>
+	
+	
+</html>
