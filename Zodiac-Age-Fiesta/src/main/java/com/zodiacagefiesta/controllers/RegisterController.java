@@ -28,9 +28,6 @@ public class RegisterController {
 	@PostMapping() 
 	public String registerPost(@ModelAttribute User user, Model model) {
 		
-		//System.out.println(user.getUsername());
-		//System.out.println(user.getPassword());
-		
 		if (userService.createUser(user) == true) {
 			return "redirect:/home";
 		} else {
