@@ -45,7 +45,7 @@ public class UserService implements UserDetailsService{
 			user.setRole("USER");
 			
 			userRepo.save(user);
-			
+			created = true;
 			
 		} else {
 			created = false;

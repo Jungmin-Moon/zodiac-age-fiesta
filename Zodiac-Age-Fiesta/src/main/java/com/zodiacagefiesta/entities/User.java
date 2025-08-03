@@ -22,10 +22,10 @@ public class User {
 	private String email;
 	
 	
-	public long getId() {
+	public long getuserId() {
 		return userId;
 	}
-	public void setId(long userId) {
+	public void setUserId(long userId) {
 		this.userId = userId;
 	}
 	public String getUsername() {

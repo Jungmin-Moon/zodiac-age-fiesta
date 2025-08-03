@@ -24,7 +24,7 @@
 		<br />
 		
 		<div>
-			<form action = "/register" method = "POST">
+			<form action = "#" th:action = "@{/register}" method = "POST">
 				username: <input type = "text" name = "username" />
 				Password: <input type = "password" name = "password" />
 				First Name: <input type = "text" name = "firstName" />
@@ -33,6 +33,10 @@
 				<input type = "hidden" th:name = "${_csrf.parameterName}" th:values = "${_csrf.token}" />
 				<button type = "submit">Register</button>
 			</form>
+		</div>
+		
+		<div>
+			<span th:text = "${error_messsage}"></span>
 		</div>
 	</body>
 
