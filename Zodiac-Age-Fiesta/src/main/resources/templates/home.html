@@ -22,6 +22,23 @@
 		<br />
 		
 		<div class = "currentUserRuns">
+			<table>
+				<thead>
+					<tr>
+						<td>User</td>
+						<td>Run</td>
+						<td>Date Started</td>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr th:each = "currentRuns: ${currentRunsLimit10}">
+						<td th:text = "${currentRuns.username}"></td>
+						<td th:text = "${currentRuns.runType}"></td>
+						<td th:text = "${currentRuns.dateTimeStarted}"></td>
+					</tr>
+				</tbody>
+			</table>	
 		</div>
 		
 		<br />
@@ -29,6 +46,23 @@
 		<br />
 		
 		<div class = "recentlyCompletedRuns">
+			<table>
+				<thead>
+					<tr>
+						<td>User</td>
+						<td>Run</td>
+						<td>Date Ended</td>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr th:each = "finishedRuns: ${finishedRunsLimit10}">
+						<td th:text = "${finishedRuns.username}"></td>
+						<td th:text = "${finishedRuns.runType}"></td>
+						<td th:text = "${finishedRuns.dateTimeEnded}"></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
 </html>
