@@ -21,7 +21,9 @@
 		<br />
 		<br />
 		
-		<div class = "currentUserRuns">
+		<div id = "noCurrentRuns" th:if = "${#lists.isEmpty(currentRunsLimit10)}"><span>No runs were ever started.</span></div>
+		
+		<div class = "currentUserRuns" th:if = "${#lists.size(currentRunsLimit10) > 0}">
 			<table>
 				<thead>
 					<tr>
@@ -45,7 +47,9 @@
 		<br />
 		<br />
 		
-		<div class = "recentlyCompletedRuns">
+		<div id = "noFinishedRuns" th:if = "${#lists.isEmpty(finishedRunsLimit10)}"><span>No runs were finished yet.</span></div>
+		
+		<div class = "recentlyCompletedRuns" th:if = "${#lists.size(finishedRunsLimit10) > 0}">
 			<table>
 				<thead>
 					<tr>
