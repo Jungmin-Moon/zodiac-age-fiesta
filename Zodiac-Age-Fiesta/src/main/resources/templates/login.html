@@ -10,6 +10,15 @@
 	
 	
 	<body>
+		<div class = "nav">
+			<a href = "/login?home">Home</a>
+			<a href = "/login?register">Register</a>
+		</div>
+		
+		<br />
+		<br />
+		<br />
+		
 		<div>
 			<form th:action = "@{/login}" method = "POST">
 				Username: <input type = "text" name = "username" /><br />

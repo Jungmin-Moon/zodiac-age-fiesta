@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.zodiacagefiesta.entities.User;
 import com.zodiacagefiesta.services.UserService;
@@ -21,7 +22,17 @@ public class RegisterController {
 	}
 	
 	@GetMapping()
-	public String register() {
+	public String register(@RequestParam(required = false) String login, @RequestParam(required = false) String home) {
+		
+		if (login != null) {
+			return "redirect:/login";
+		}
+		
+		if (home != null) {
+			return "redirect:/home";
+		}
+		
+		
 		return "register";
 	}
 	
